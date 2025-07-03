@@ -25,7 +25,7 @@ const PROJECTS_DATA = [
       "A personal portfolio website built with React and Bootstrap. This website showcases my projects, skills, and experience.\n\nIt features a modern dark theme design that is fully responsive across all devices.",
     thumbnail_url: portfolioImg,
     live_demo_url: "",
-    repo_url: "https://github.com/gilangwahyun/portfolio",
+    repo_url: "https://github.com/gilangwahyun/portofolio",
     technologies: ["React", "Bootstrap", "JavaScript", "CSS"],
     created_at: "2023-11-10"
   }
