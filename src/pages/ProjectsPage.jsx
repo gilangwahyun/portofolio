@@ -19,7 +19,7 @@ const PROJECTS_DATA = [
   },
   {
     id: 2,
-    title: "Portfolio Website",
+    title: "Portofolio Website",
     category: "Web Development",
     description:
       "A personal portfolio website built with React and Bootstrap. This website showcases my projects, skills, and experience.\n\nIt features a modern dark theme design that is fully responsive across all devices.",
@@ -134,7 +134,7 @@ function ProjectCard({ project }) {
           )}
         </div>
         <div className="card-body">
-          <h5 className="card-title">{project.title}</h5>
+          <h5 className="card-title text-white">{project.title}</h5>
           <p className="card-text small mb-3" style={{ 
             display: '-webkit-box', 
             WebkitLineClamp: 3, 
