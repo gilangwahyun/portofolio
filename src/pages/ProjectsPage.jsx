@@ -26,7 +26,7 @@ const PROJECTS_DATA = [
     thumbnail_url: portfolioImg,
     live_demo_url: "",
     repo_url: "https://github.com/gilangwahyun/portofolio",
-    technologies: ["React", "Bootstrap", "JavaScript", "CSS"],
+    technologies: ["React", "Bootstrap", "JavaScript"],
     created_at: "2023-11-10"
   }
 ];

@@ -3,6 +3,8 @@ import profileImage from '../assets/image_profile.JPG';
 import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+import { FaReact, FaJsSquare, FaHtml5, FaBootstrap, FaLaravel, FaPhp, FaDatabase } from 'react-icons/fa';
+
 export default function HomePage() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const animatedElements = useRef([]);
@@ -174,13 +176,13 @@ export default function HomePage() {
                 <h2 className="h3 mb-4" style={{ color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Gilang Wahyu Nugraha</h2>
                 <p className="lead mb-4">
                   I am a Computer Science student at Atma Jaya Yogyakarta University, passionate about
-                  web and mobile development. Currently focusing on building responsive and user-friendly 
+                  web development. Currently focusing on building responsive and user-friendly 
                   applications using modern frameworks and technologies.
                 </p>
                 <div className="d-flex flex-wrap gap-2 mb-4 skill-tags">
                   <Skill>Laravel</Skill>
                   <Skill>React</Skill>
-                  <Skill>Flutter</Skill>
+                  <Skill>HTML/CSS</Skill>
                   <Skill>MySQL</Skill>
                   <Skill>PHP</Skill>
                   <Skill>JavaScript</Skill>
@@ -199,13 +201,13 @@ export default function HomePage() {
                   >
                     Contact Me
                   </a>
-                  <Link
-                    to="/resume"
+                  <a
+                    href="/Gilang Wahyu Nugraha - CV.pdf"
+                    download="Resume-Gilang Wahyu Nugraha.pdf"
                     className="btn btn-outline-primary px-4 py-2"
-                    title="View and Print Resume"
                   >
                     <i className="bi bi-file-earmark-text me-2"></i>Resume
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -314,8 +316,7 @@ export default function HomePage() {
                   <p>
                     As I progressed in my studies, I developed a passion for both web and mobile development.
                     I started with HTML, CSS, and JavaScript for web development, then advanced to using frameworks
-                    like Bootstrap for styling, Laravel for backend, and React with Vite for frontend. For mobile
-                    development, I've been working with Flutter.
+                    like Bootstrap for styling, Laravel for backend, and React with Vite for frontend.
                   </p>
                   <p className="mb-0">
                     While I'm still early in my career journey, I've collaborated with classmates on university projects.
@@ -335,94 +336,35 @@ export default function HomePage() {
             <h2 className="display-5 fw-bold" style={{ color: 'var(--accent-color)' }}>Technical Skills</h2>
             <p className="w-75 mx-auto">My expertise and proficiency across various technologies</p>
           </div>
-          
-          <div className="row g-4">
-            <div className="col-md-6 animate-on-scroll fade-in-left">
-              <h3 className="h4 mb-4">Frontend Development</h3>
-              
-              <div className="skill-item mb-4">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">React.js</span>
-                  <span className="skill-percentage">75%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              
-              <div className="skill-item mb-4">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">JavaScript</span>
-                  <span className="skill-percentage">80%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '80%' }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              
-              <div className="skill-item mb-4">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">HTML/CSS</span>
-                  <span className="skill-percentage">85%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '85%' }} aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              
-              <div className="skill-item">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">Bootstrap</span>
-                  <span className="skill-percentage">80%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '80%' }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
+
+          <div className="row g-4 text-center">
+            <div className="col-md-3 animate-on-scroll fade-in-up">
+              <FaReact size={50} color="#61DBFB" />
+              <h5 className="mt-3 text-white">React.js</h5>
             </div>
-            
-            <div className="col-md-6 animate-on-scroll fade-in-right">
-              <h3 className="h4 mb-4">Backend & Mobile Development</h3>
-              
-              <div className="skill-item mb-4">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">Laravel</span>
-                  <span className="skill-percentage">70%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '70%' }} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              
-              <div className="skill-item mb-4">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">PHP</span>
-                  <span className="skill-percentage">75%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              
-              <div className="skill-item mb-4">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">Flutter</span>
-                  <span className="skill-percentage">65%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '65%' }} aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              
-              <div className="skill-item">
-                <div className="d-flex justify-content-between mb-1">
-                  <span className="skill-name">MySQL</span>
-                  <span className="skill-percentage">70%</span>
-                </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: '70%' }} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
+            <div className="col-md-3 animate-on-scroll fade-in-up">
+              <FaJsSquare size={50} color="#F7DF1E" />
+              <h5 className="mt-3 text-white">JavaScript</h5>
+            </div>
+            <div className="col-md-3 animate-on-scroll fade-in-up">
+              <FaHtml5 size={50} color="#E34F26" />
+              <h5 className="mt-3 text-white">HTML/CSS</h5>
+            </div>
+            <div className="col-md-3 animate-on-scroll fade-in-up">
+              <FaBootstrap size={50} color="#7952B3" />
+              <h5 className="mt-3 text-white">Bootstrap</h5>
+            </div>
+            <div className="col-md-3 animate-on-scroll fade-in-up">
+              <FaLaravel size={50} color="#FF2D20" />
+              <h5 className="mt-3 text-white">Laravel</h5>
+            </div>
+            <div className="col-md-3 animate-on-scroll fade-in-up">
+              <FaPhp size={50} color="#777BB4" />
+              <h5 className="mt-3 text-white">PHP</h5>
+            </div>
+            <div className="col-md-3 animate-on-scroll fade-in-up">
+              <FaDatabase size={50} color="#4479A1" />
+              <h5 className="mt-3 text-white">MySQL</h5>
             </div>
           </div>
         </div>
@@ -435,8 +377,8 @@ export default function HomePage() {
           <p className="w-75 mx-auto">Areas of development I'm focusing on</p>
         </div>
         
-        <div className="row g-4">
-          <div className="col-md-4">
+        <div className="row g-4 justify-content-center">
+          <div className="col-md-6">
             <div className="card h-100 border-0 shadow-lg service-card animate-on-scroll fade-in-up" data-delay="0.1">
               <div className="card-body p-4 text-center">
                 <div className="service-icon mb-4">
@@ -451,7 +393,7 @@ export default function HomePage() {
             </div>
           </div>
           
-          <div className="col-md-4">
+          {/* <div className="col-md-4">
             <div className="card h-100 border-0 shadow-lg service-card animate-on-scroll fade-in-up" data-delay="0.3">
               <div className="card-body p-4 text-center">
                 <div className="service-icon mb-4">
@@ -464,9 +406,9 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           
-          <div className="col-md-4">
+          <div className="col-md-6">
             <div className="card h-100 border-0 shadow-lg service-card animate-on-scroll fade-in-up" data-delay="0.5">
               <div className="card-body p-4 text-center">
                 <div className="service-icon mb-4">
@@ -502,7 +444,7 @@ export default function HomePage() {
                 <p className="mb-0">
                   Currently in my 6th semester, focusing on web and mobile application development.
                   Relevant coursework includes Data Structures, Algorithms, Object-Oriented Programming,
-                  Database Systems, Web Programming, and Mobile Application Development.
+                  Database Systems, Web Programming.
                 </p>
               </div>
             </div>

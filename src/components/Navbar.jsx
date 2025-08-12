@@ -34,12 +34,6 @@ export default function Navbar() {
                 Projects
               </NavLink>
             </li>
-            
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/resume" onClick={() => setIsOpen(false)}>
-                Resume
-              </NavLink>
-            </li>
           </ul>
         </div>
       </div>

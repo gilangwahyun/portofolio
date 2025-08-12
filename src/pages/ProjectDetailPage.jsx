@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import reusemartImg from '../assets/reusemart.png';
+import reusemartLandingPage from '../assets/ReuseMart-LandingPage.png';
+import reusemartLoginPage from '../assets/ReuseMart-LoginPage.png';
+import reusemartProductPage from '../assets/ReuseMart-ProductPage.png';
+import reusemartAdminPage from '../assets/ReuseMart-AdminPage.png';
+import reusemartOwnerPage from '../assets/ReuseMart-OwnerPage.png';
 import portfolioImg from '../assets/portofolio.png';
 
 // Data proyek hardcode (sama dengan di ProjectsPage.jsx)
@@ -15,7 +20,29 @@ const PROJECTS_DATA = [
     live_demo_url: "https://reusemartuajy.my.id",
     repo_url: "",
     technologies: ["Laravel", "MySQL", "Bootstrap", "JavaScript", "React"],
-    created_at: "2023-09-15"
+    created_at: "2023-09-15",
+    pages: [
+      {
+        image: reusemartLandingPage,
+        caption: "ReuseMart main page displaying the latest products."
+      },
+      {
+        image: reusemartLoginPage,
+        caption: "User login page to access the ReuseMart system."
+      },
+      {
+        image: reusemartProductPage,
+        caption: "Product page showing details, description, and purchase button."
+      },
+      {
+        image: reusemartAdminPage,
+        caption: "Admin dashboard for managing users, products, and transactions."
+      },
+      {
+        image: reusemartOwnerPage,
+        caption: "Owner dashboard for monitoring sales performance and reports."
+      }
+    ]
   },
   {
     id: 2,
@@ -26,7 +53,7 @@ const PROJECTS_DATA = [
     thumbnail_url: portfolioImg,
     live_demo_url: "",
     repo_url: "https://github.com/gilangwahyun/portofolio",
-    technologies: ["React", "Bootstrap", "JavaScript", "CSS"],
+    technologies: ["React", "Bootstrap", "JavaScript"],
     created_at: "2023-11-10"
   }
 ];
@@ -124,6 +151,26 @@ export default function ProjectDetailPage() {
                 <p className="fst-italic">No description available</p>
               )}
             </div>
+
+            {/* Project Pages (Notion style) */}
+            {project.pages && project.pages.length > 0 && (
+              <div className="mt-5">
+                <h3 className="h5 fw-semibold mb-3" style={{ color: 'var(--accent-color)' }}>Project Pages</h3>
+                <div className="d-flex flex-column gap-4">
+                  {project.pages.map((page, idx) => (
+                    <div key={idx} className="text-center">
+                      <img 
+                        src={page.image} 
+                        alt={`Page ${idx + 1}`} 
+                        className="img-fluid rounded shadow-sm mb-2"
+                        style={{ maxHeight: "500px", objectFit: "contain" }}
+                      />
+                      <p className="text-white">{page.caption}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             
             {/* Technologies */}
             {project.technologies && project.technologies.length > 0 && (
