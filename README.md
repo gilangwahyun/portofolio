@@ -1,12 +1,39 @@
-# React + Vite
+# Personal Portfolio Website
+Website portofolio pribadi yang dibangun menggunakan React.js dan Bootstrap untuk menampilkan proyek, keterampilan, dan pengalaman saya sebagai Web Developer. Proyek ini dirancang dengan prinsip mobile-first agar responsif di berbagai perangkat.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Fitur Utama
+Desain Responsif: Optimal untuk tampilan desktop, tablet, dan perangkat seluler.
+Galeri Proyek: Menampilkan proyek utama seperti ReuseMart (E-Commerce) dan Rental Jaya (Car Rental) dengan link repositori langsung.
+Integrasi Keterampilan: Visualisasi Tech Stack yang dikuasai termasuk JavaScript, PHP, dan Laravel.
+Formulir Kontak: Memudahkan kolaborator potensial untuk menghubungi melalui email atau media sosial.
 
-Currently, two official plugins are available:
+🛠️ Tech Stack
+Frontend: React.js.
+Styling: Bootstrap.
+Deployment: Vercel Hosting.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Icons: React Icons.
 
-## Expanding the ESLint configuration
+📦 Instalasi Lokal
+Jika Anda ingin menjalankan proyek ini di mesin lokal, ikuti langkah berikut:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone repositori:
+git clone https://github.com/gilangwahyun/personal-portfolio.git
+
+Masuk ke direktori proyek:
+cd personal-portfolio
+
+Instal dependensi:
+npm install
+
+Jalankan aplikasi:
+npm start
+
+Aplikasi akan berjalan di http://localhost:3000.
+
+🌐 Deployment
+Proyek ini telah dideploy secara otomatis menggunakan Vercel. Setiap perubahan pada cabang main akan memicu build baru secara otomatis.
+Live Demo: gilangnugraha.vercel.app 
+
+📄 Lisensi
+Proyek ini dibuat untuk tujuan portofolio pribadi.# React + Vite
