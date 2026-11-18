@@ -17,6 +17,7 @@ export default function Navbar() {
           type="button" 
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen ? "true" : "false"}
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>

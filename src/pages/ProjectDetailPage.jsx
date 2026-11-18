@@ -1,62 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import reusemartImg from '../assets/reusemart.png';
-import reusemartLandingPage from '../assets/ReuseMart-LandingPage.png';
-import reusemartLoginPage from '../assets/ReuseMart-LoginPage.png';
-import reusemartProductPage from '../assets/ReuseMart-ProductPage.png';
-import reusemartAdminPage from '../assets/ReuseMart-AdminPage.png';
-import reusemartOwnerPage from '../assets/ReuseMart-OwnerPage.png';
-import portfolioImg from '../assets/portofolio.png';
-
-// Data proyek hardcode (sama dengan di ProjectsPage.jsx)
-const PROJECTS_DATA = [
-  {
-    id: 1,
-    title: "ReuseMart",
-    category: "Web Development",
-    description:
-      "ReuseMart is an e-commerce platform for buying and selling second-hand goods in Yogyakarta. This project was developed as the final assignment for the Software Project Development course.\n\nThe website enables the general public to sell and purchase pre-owned items in good condition, encouraging reuse and helping reduce waste in the community.",
-    thumbnail_url: reusemartImg,
-    live_demo_url: "https://reusemartuajy.my.id",
-    repo_url: "",
-    technologies: ["Laravel", "MySQL", "Bootstrap", "JavaScript", "React"],
-    created_at: "2023-09-15",
-    pages: [
-      {
-        image: reusemartLandingPage,
-        caption: "ReuseMart main page displaying the latest products."
-      },
-      {
-        image: reusemartLoginPage,
-        caption: "User login page to access the ReuseMart system."
-      },
-      {
-        image: reusemartProductPage,
-        caption: "Product page showing details, description, and purchase button."
-      },
-      {
-        image: reusemartAdminPage,
-        caption: "Admin dashboard for managing users, products, and transactions."
-      },
-      {
-        image: reusemartOwnerPage,
-        caption: "Owner dashboard for monitoring sales performance and reports."
-      }
-    ]
-  },
-  {
-    id: 2,
-    title: "Portofolio Website",
-    category: "Web Development",
-    description:
-      "A personal portfolio website built with React and Bootstrap. This website showcases my projects, skills, and experience.\n\nIt features a modern dark theme design that is fully responsive across all devices.",
-    thumbnail_url: portfolioImg,
-    live_demo_url: "",
-    repo_url: "https://github.com/gilangwahyun/portofolio",
-    technologies: ["React", "Bootstrap", "JavaScript"],
-    created_at: "2023-11-10"
-  }
-];
+import { PROJECTS_DATA } from '../data/projects';
+import Footer from '../components/Footer';
 
 
 export default function ProjectDetailPage() {
@@ -66,20 +11,15 @@ export default function ProjectDetailPage() {
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
-    // Simulasi loading untuk UX yang lebih baik
-    const timer = setTimeout(() => {
-      const foundProject = PROJECTS_DATA.find(p => p.id === parseInt(id));
-      
-      if (foundProject) {
-        setProject(foundProject);
-      } else {
-        setNotFound(true);
-      }
-      
-      setLoading(false);
-    }, 500);
+    const foundProject = PROJECTS_DATA.find(p => p.id === parseInt(id));
     
-    return () => clearTimeout(timer);
+    if (foundProject) {
+      setProject(foundProject);
+    } else {
+      setNotFound(true);
+    }
+    
+    setLoading(false);
   }, [id]);
 
   if (loading) {
@@ -161,7 +101,7 @@ export default function ProjectDetailPage() {
                     <div key={idx} className="text-center">
                       <img 
                         src={page.image} 
-                        alt={`Page ${idx + 1}`} 
+                        alt={page.caption || `${project.title} screenshot ${idx + 1}`} 
                         className="img-fluid rounded shadow-sm mb-2"
                         style={{ maxHeight: "500px", objectFit: "contain" }}
                       />
@@ -220,6 +160,7 @@ export default function ProjectDetailPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
-} 
+}

@@ -1,35 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import reusemartImg from '../assets/reusemart.png';
-import portfolioImg from '../assets/portofolio.png';
-
-// Data proyek hardcode
-const PROJECTS_DATA = [
-  {
-    id: 1,
-    title: "ReuseMart ",
-    category: "Web Development",
-    description:
-      "ReuseMart  is an e-commerce platform for buying and selling second-hand goods in Yogyakarta. This project was developed as the final assignment for the Software Project Development course.\n\nThe website enables the general public to sell and purchase pre-owned items in good condition, encouraging reuse and helping reduce waste in the community.",
-    thumbnail_url: reusemartImg,
-    live_demo_url: "https://reusemartuajy.my.id",
-    repo_url: "",
-    technologies: ["Laravel", "MySQL", "Bootstrap", "JavaScript", "React"],
-    created_at: "2023-09-15"
-  },
-  {
-    id: 2,
-    title: "Portofolio Website",
-    category: "Web Development",
-    description:
-      "A personal portfolio website built with React and Bootstrap. This website showcases my projects, skills, and experience.\n\nIt features a modern dark theme design that is fully responsive across all devices.",
-    thumbnail_url: portfolioImg,
-    live_demo_url: "",
-    repo_url: "https://github.com/gilangwahyun/portofolio",
-    technologies: ["React", "Bootstrap", "JavaScript"],
-    created_at: "2023-11-10"
-  }
-];
+import { PROJECTS_DATA } from '../data/projects';
+import Footer from '../components/Footer';
 
 
 export default function ProjectsPage() {
@@ -39,23 +11,18 @@ export default function ProjectsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulasi loading untuk UX yang lebih baik
-    const timer = setTimeout(() => {
-      setProjects(PROJECTS_DATA);
-      
-      // Extract unique categories
-      const uniqueCategories = ['all'];
-      PROJECTS_DATA.forEach(project => {
-        if (project.category && !uniqueCategories.includes(project.category)) {
-          uniqueCategories.push(project.category);
-        }
-      });
-      setCategories(uniqueCategories);
-      
-      setLoading(false);
-    }, 600);
+    setProjects(PROJECTS_DATA);
     
-    return () => clearTimeout(timer);
+    // Extract unique categories
+    const uniqueCategories = ['all'];
+    PROJECTS_DATA.forEach(project => {
+      if (project.category && !uniqueCategories.includes(project.category)) {
+        uniqueCategories.push(project.category);
+      }
+    });
+    setCategories(uniqueCategories);
+    
+    setLoading(false);
   }, []);
 
   // Filter projects by category
@@ -67,9 +34,9 @@ export default function ProjectsPage() {
     <div className="bg-dark-theme min-vh-100" style={{ paddingTop: '76px' }}>
       <div className="container py-5">
         <h1 className="text-center fw-bold mb-4" style={{ color: 'var(--accent-color)' }}>
-          My Projects
+          Projects
         </h1>
-        <p className="text-center mb-5">Showcase of my recent work</p>
+        <p className="text-center mb-5">Web applications and development projects</p>
         
         {/* Category filter */}
         <div className="d-flex flex-wrap justify-content-center gap-2 mb-5">
@@ -106,6 +73,7 @@ export default function ProjectsPage() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }
@@ -170,4 +138,4 @@ function ProjectCard({ project }) {
       </div>
     </Link>
   );
-} 
+}
