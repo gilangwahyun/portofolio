@@ -16,13 +16,13 @@ export default function AboutSection() {
               </h2>
               <div className="card-text">
                 <p>
-                  I study Computer Science at Atma Jaya Yogyakarta University in my sixth semester. I started programming with C and Java, learning object-oriented design and core algorithms.
+                  I hold a Bachelor of Computer Science from Atma Jaya Yogyakarta University (graduated 2026). My background covers software engineering, object-oriented design, data structures, and relational database systems.
                 </p>
                 <p>
-                  Today I build web applications using React, Vite, Bootstrap, and Laravel with MySQL databases.
+                  I build web applications and progressive web apps using React, Next.js, TypeScript, and Laravel with MySQL databases.
                 </p>
                 <p className="mb-0">
-                  I collaborate on university team projects, focusing on responsive interfaces, database schemas, and clean code.
+                  I focus on scalable architecture, responsive user interfaces, and robust backend integrations.
                 </p>
               </div>
             </div>

@@ -12,11 +12,11 @@ export default function EducationSection() {
             <div className="card-body p-4">
               <div className="d-flex justify-content-between align-items-center mb-3">
                 <h3 className="h4 mb-0">Atma Jaya Yogyakarta University</h3>
-                <span className="badge bg-primary px-3 py-2">Present</span>
+                <span className="badge bg-primary px-3 py-2">Graduated 2026</span>
               </div>
-              <p className="text-accent mb-2">Bachelor of Computer Science</p>
+              <p className="text-accent mb-2">Bachelor of Computer Science (S.Kom.)</p>
               <p className="mb-0">
-                Sixth semester coursework includes Data Structures, Algorithms, Object-Oriented Programming, Database Systems, and Web Programming.
+                Completed degree with focus on software engineering, web application development, relational database systems, and algorithms.
               </p>
             </div>
           </div>

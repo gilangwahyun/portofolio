@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-md-4 mb-4 mb-md-0">
             <h4 className="h5 mb-3 text-white">Gilang Wahyu Nugraha</h4>
             <p className="mb-0 footer-description">
-              Computer Science student at Atma Jaya Yogyakarta University. Building responsive web applications with modern technologies.
+              Computer Science graduate from Atma Jaya Yogyakarta University. Building full-stack web applications with modern technologies.
             </p>
           </div>
           

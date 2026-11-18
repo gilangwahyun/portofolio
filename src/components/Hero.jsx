@@ -28,15 +28,15 @@ export default function Hero() {
                 Gilang Wahyu Nugraha
               </h2>
               <p className="lead mb-4">
-                Computer Science student at Atma Jaya Yogyakarta University. I build responsive web applications with React, Laravel, and Bootstrap.
+                Computer Science graduate from Atma Jaya Yogyakarta University. I build full-stack web applications with React, Next.js, and Laravel.
               </p>
               <div className="d-flex flex-wrap gap-2 mb-4 skill-tags">
-                <span className="badge skill-badge">Laravel</span>
                 <span className="badge skill-badge">React</span>
-                <span className="badge skill-badge">HTML/CSS</span>
-                <span className="badge skill-badge">MySQL</span>
+                <span className="badge skill-badge">Next.js</span>
+                <span className="badge skill-badge">TypeScript</span>
+                <span className="badge skill-badge">Laravel</span>
                 <span className="badge skill-badge">PHP</span>
-                <span className="badge skill-badge">JavaScript</span>
+                <span className="badge skill-badge">MySQL</span>
                 <span className="badge skill-badge">Bootstrap</span>
               </div>
               <div className="d-flex gap-3">
