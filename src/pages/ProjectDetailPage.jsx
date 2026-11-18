@@ -98,14 +98,15 @@ export default function ProjectDetailPage() {
                 <h3 className="h5 fw-semibold mb-3" style={{ color: 'var(--accent-color)' }}>Project Pages</h3>
                 <div className="d-flex flex-column gap-4">
                   {project.pages.map((page, idx) => (
-                    <div key={idx} className="text-center">
+                    <div key={idx} className="text-center p-3 rounded" style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                       <img 
                         src={page.image} 
                         alt={page.caption || `${project.title} screenshot ${idx + 1}`} 
-                        className="img-fluid rounded shadow-sm mb-2"
-                        style={{ maxHeight: "500px", objectFit: "contain" }}
+                        className="img-fluid rounded shadow-sm mb-3"
+                        style={{ maxHeight: "550px", objectFit: "contain" }}
+                        loading="lazy"
                       />
-                      <p className="text-white">{page.caption}</p>
+                      <p className="text-light small mb-0">{page.caption}</p>
                     </div>
                   ))}
                 </div>
